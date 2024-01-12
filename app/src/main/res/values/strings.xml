@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">QIWEI_EXPERIMENT_01</string>
+    <string name="open_fragment">Click button to open fragment.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="number_of_button_press">The total times you pressed the \'Press me\' button is</string>
+    <string name="action_press_me">Press Me</string>
 </resources>
