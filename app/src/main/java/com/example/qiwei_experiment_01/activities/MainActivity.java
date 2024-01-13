@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity{
     Button btnTextWidgets;
     Button btnButtons;
     Button btnListView;
+    Button btnRvView;
 
     Context context;
 
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
         btnTextWidgets = (Button) findViewById(R.id.btnTextWidgets);
         btnButtons = (Button) findViewById(R.id.btnButtons);
         btnListView = (Button) findViewById(R.id.btnListView);
+        btnRvView = (Button) findViewById(R.id.btnRvView);
 
         this.btnButtons.setEnabled(false);
 
@@ -49,6 +51,15 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        btnRvView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RecyclerViewV1Activity.class);
                 startActivity(intent);
             }
         });

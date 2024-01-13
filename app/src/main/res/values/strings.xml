@@ -14,5 +14,7 @@
     <string name="title_widget_playground">Widget Playground</string>
     <string name="title_text_widget_playground">Text Widget Playground</string>
     <string name="title_list_view_playground">List View Playground</string>
+    <string name="title_recycler_view_playground">Recycler View Playground</string>
     <string name="list_view">List View</string>
+    <string name="recycler_view">Recycler View (V1)</string>
 </resources>

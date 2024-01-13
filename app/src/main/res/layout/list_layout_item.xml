@@ -2,16 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding_sm"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/padding_sm">
 
     <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/mcvCountryItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/llCountryItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:orientation="vertical">
 
             <TextView
