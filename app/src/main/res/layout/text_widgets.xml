@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_green"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginVertical="20dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_margin="@dimen/margin_l"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tvExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Simple Text View">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginBottom="@dimen/margin_l"
+                android:textSize="@dimen/textsize_l"
+                android:text="Text View Context">
+            </TextView>
+
+            <TextView
+                android:id="@+id/etExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Plain Text">
+            </TextView>
+
+            <EditText
+                android:id="@+id/etExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_l"
+                android:inputType="text"
+                android:hint="Enter text" />
+
+            <TextView
+                android:id="@+id/etPasswordExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Password">
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/etPasswordExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_l"
+                android:inputType="textPassword"
+                android:hint="Enter password" />
+
+            <TextView
+                android:id="@+id/etPasswordNumericExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Password (Numeric)">
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/etPasswordNumericExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_l"
+                android:inputType="numberPassword"
+                android:hint="Enter password numeric" />
+
+            <TextView
+                android:id="@+id/etEmailExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Email Address">
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/etEmailExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_l"
+                android:inputType="textEmailAddress"
+                android:hint="Enter email" />
+
+            <TextView
+                android:id="@+id/etPhoneExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Phone">
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/etPhoneExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_l"
+                android:inputType="phone"
+                android:hint="Enter phone" />
+
+            <TextView
+                android:id="@+id/etPostalAddressExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Postal Address">
+            </TextView>
+
+
+            <EditText
+                android:id="@+id/etPostalAddressExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_l"
+                android:inputType="textPostalAddress"
+                android:hint="Enter postal address" />
+
+            <TextView
+                android:id="@+id/etMultiLineExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Multi Line">
+            </TextView>
+
+            <EditText
+                android:id="@+id/etMultiLineExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start|top"
+                android:lines="3"
+                android:hint="Remarks"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/editTextDateExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:hint="Enter Date"
+                android:text="Edit Text - Date" />
+
+
+            <EditText
+                android:id="@+id/editTextDateExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/editTextTimeExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:hint="Enter Time"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Time" />
+
+            <EditText
+                android:id="@+id/editTextTimeExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time" />
+
+            <TextView
+                android:id="@+id/editTextNumberExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="Edit Text - Number" />
+
+            <EditText
+                android:id="@+id/editTextNumberExample"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Number"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/autoCompleteTextViewExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="AutoCompleteTextView - Auto Complete" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter text" />
+
+            <TextView
+                android:id="@+id/multiAutoCompleteTextViewExampleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@color/skyblue"
+                android:textSize="@dimen/textsize_l"
+                android:text="AutoCompleteTextView - Auto Complete (Multiple)" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/multiAutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter text" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp"></Space>
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

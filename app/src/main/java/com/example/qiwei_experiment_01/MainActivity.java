@@ -1,30 +1,27 @@
 package com.example.qiwei_experiment_01;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-
-import android.app.FragmentManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
-    Button btnOpenFragment;
+public class MainActivity extends AppCompatActivity{
 
-    Button btnPressMe;
+    Button btnTextWidgets;
+    Button btnButtons;
+    Button btnListView;
+
     Context context;
 
-    Integer count;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        context = this;
-        this.count = 0;
         this.init();
     }
 
@@ -32,34 +29,30 @@ public class MainActivity extends AppCompatActivity {
 
     private void init() {
         // Bind Button
-        btnOpenFragment = findViewById(R.id.btnOpenFragment);
-        btnPressMe = findViewById(R.id.btnPressMe);
+        btnTextWidgets = (Button) findViewById(R.id.btnTextWidgets);
+        btnButtons = (Button) findViewById(R.id.btnButtons);
+        btnListView = (Button) findViewById(R.id.btnListView);
 
-        setOnClickListener(btnPressMe);
-        setOnClickListener(btnOpenFragment);
-    }
-    protected void setOnClickListener(View view) {
-        if (view.getId() == R.id.btnPressMe) {
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    count++;
-                }
-            });
-        }
+        this.btnButtons.setEnabled(false);
 
-        if (view.getId() == R.id.btnOpenFragment) {
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    FragmentA fragmentA = FragmentA.newInstance(count);
-                    fragmentA.show(getSupportFragmentManager(), FragmentA.TAG_FRAGMENT_A);
-                }
-            });
+        btnTextWidgets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TextWidgetActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        }
+        btnListView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
-
 
 }

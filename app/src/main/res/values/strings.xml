@@ -5,4 +5,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="number_of_button_press">The total times you pressed the \'Press me\' button is</string>
     <string name="action_press_me">Press Me</string>
+
+
+    <!-- Widget Playground -->
+    <string name="label_text_widgets">Text Widgets</string>
+    <string name="label_btn_widgets">Button Widgets</string>
+
+    <string name="title_widget_playground">Widget Playground</string>
+    <string name="title_text_widget_playground">Text Widget Playground</string>
+    <string name="title_list_view_playground">List View Playground</string>
+    <string name="list_view">List View</string>
 </resources>
