@@ -1,4 +1,4 @@
-package com.example.qiwei_experiment_01;
+package com.example.qiwei_experiment_01.activities;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
@@ -6,6 +6,9 @@ import android.widget.AutoCompleteTextView;
 import android.widget.MultiAutoCompleteTextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.qiwei_experiment_01.R;
+import com.example.qiwei_experiment_01.helpers.SpaceTokenizer;
 
 public class TextWidgetActivity extends AppCompatActivity{
 

@@ -1,6 +1,5 @@
-package com.example.qiwei_experiment_01;
+package com.example.qiwei_experiment_01.fragments;
 
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
+
+import com.example.qiwei_experiment_01.R;
 
 public class FragmentA extends DialogFragment {
 

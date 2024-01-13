@@ -1,4 +1,4 @@
-package com.example.qiwei_experiment_01;
+package com.example.qiwei_experiment_01.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,10 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.qiwei_experiment_01.helpers.JsonLoader;
+import com.example.qiwei_experiment_01.R;
+import com.example.qiwei_experiment_01.adapters.ListAdapterExample;
 
 public class ListViewActivity extends AppCompatActivity{
 
