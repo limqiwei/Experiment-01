@@ -2,14 +2,14 @@ package com.example.qiwei_experiment_01.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class QW_Country {
+public class QWCountry {
 
     @SerializedName("name")
     private String name;
     @SerializedName("code")
     private String code;
 
-    public QW_Country(String name, String code) {
+    public QWCountry(String name, String code) {
         this.name = name;
         this.code = code;
     }

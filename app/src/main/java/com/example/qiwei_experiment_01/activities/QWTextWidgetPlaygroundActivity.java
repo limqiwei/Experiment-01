@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.qiwei_experiment_01.R;
 import com.example.qiwei_experiment_01.helpers.SpaceTokenizer;
 
-public class TextWidgetActivity extends AppCompatActivity{
+public class QWTextWidgetPlaygroundActivity extends AppCompatActivity{
 
     AutoCompleteTextView autoCompleteTextView;
     MultiAutoCompleteTextView multiAutoCompleteTextView;

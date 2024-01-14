@@ -9,39 +9,39 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qiwei_experiment_01.R;
-import com.example.qiwei_experiment_01.models.QW_Country;
-import com.example.qiwei_experiment_01.view_holders.CustomViewHolderV1;
+import com.example.qiwei_experiment_01.models.QWCountry;
+import com.example.qiwei_experiment_01.view_holders.QWRecyclerItemViewHolder;
 
 import java.util.List;
 
-public class HorizontalRecyclerAdapter extends RecyclerView.Adapter<CustomViewHolderV1> {
+public class QWHorizontalRecyclerAdapter extends RecyclerView.Adapter<QWRecyclerItemViewHolder> {
 
-    List<QW_Country> countries;
+    List<QWCountry> countries;
     Context context;
 
-    public HorizontalRecyclerAdapter(Context context) {
+    public QWHorizontalRecyclerAdapter(Context context) {
         this.context = context;
     }
 
-    public void setCountries(List<QW_Country> countries) {
+    public void setCountries(List<QWCountry> countries) {
         this.countries = countries;
     }
 
     @NonNull
     @Override
-    public CustomViewHolderV1 onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public QWRecyclerItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
 
         View view = inflater.inflate(R.layout.list_layout_item, null, true);
         RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         view.setLayoutParams(lp);
-        CustomViewHolderV1 customViewHolderV1 = new CustomViewHolderV1(view);
+        QWRecyclerItemViewHolder customViewHolderV1 = new QWRecyclerItemViewHolder(view);
         return customViewHolderV1;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolderV1 holder, int position) {
-        QW_Country country = this.countries.get(position);
+    public void onBindViewHolder(@NonNull QWRecyclerItemViewHolder holder, int position) {
+        QWCountry country = this.countries.get(position);
 
         holder.tvCountryName.setText(country.getName());
         holder.tvCountryCode.setText(country.getCode());

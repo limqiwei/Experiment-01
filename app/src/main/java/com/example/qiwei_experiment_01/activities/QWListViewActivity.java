@@ -9,9 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.qiwei_experiment_01.helpers.JsonLoader;
 import com.example.qiwei_experiment_01.R;
-import com.example.qiwei_experiment_01.adapters.ListAdapterExample;
+import com.example.qiwei_experiment_01.adapters.QWListAdapter;
 
-public class ListViewActivity extends AppCompatActivity{
+public class QWListViewActivity extends AppCompatActivity{
 
     ListView lvListExample;
 
@@ -31,7 +31,7 @@ public class ListViewActivity extends AppCompatActivity{
                 view.setBackground(lvListExample.getBackground());
             }
         });
-        lvListExample.setAdapter(new ListAdapterExample(this, JsonLoader.loadCountries(this)));
+        lvListExample.setAdapter(new QWListAdapter(this, JsonLoader.loadCountries(this)));
     }
 
 

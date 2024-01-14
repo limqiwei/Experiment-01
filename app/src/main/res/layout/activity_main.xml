@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MainActivity">
+    tools:context=".activities.QWMainActivity">
 
 
     <LinearLayout
@@ -44,14 +44,14 @@
             android:layout_width="match_parent"
             android:layout_marginHorizontal="50dp"
             android:layout_height="wrap_content"
-            android:text="@string/recycler_view" />
+            android:text="@string/linear_recycler_view_vertical" />
 
         <Button
             android:id="@+id/btnHRvView"
             android:layout_width="match_parent"
             android:layout_marginHorizontal="50dp"
             android:layout_height="wrap_content"
-            android:text="@string/horizontal_recycler_view" />
+            android:text="@string/linear_recycler_view_horizontal" />
 
         <Button
             android:id="@+id/btnGridRvView"

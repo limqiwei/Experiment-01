@@ -8,12 +8,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qiwei_experiment_01.R;
-import com.example.qiwei_experiment_01.adapters.CustomRecyclerAdapterV1;
-import com.example.qiwei_experiment_01.enums.RecyclerViewMode;
-import com.example.qiwei_experiment_01.enums.RecyclerViewOrientation;
+import com.example.qiwei_experiment_01.adapters.QWRecyclerViewAdapter;
+import com.example.qiwei_experiment_01.enums.QWRecyclerViewMode;
+import com.example.qiwei_experiment_01.enums.QWRecyclerViewOrientation;
 import com.example.qiwei_experiment_01.helpers.JsonLoader;
 
-public class GridRecyclerViewActivity extends AppCompatActivity{
+public class QWGridRecyclerViewActivity extends AppCompatActivity{
 
     public static final String INTENT_PARAM_BOOLEAN_IS_VERTICAL = "isVertical";
     RecyclerView rvWidget;
@@ -25,20 +25,17 @@ public class GridRecyclerViewActivity extends AppCompatActivity{
         boolean isVertical = true; // Default
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            isVertical = extras.getBoolean(GridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL);
+            isVertical = extras.getBoolean(QWGridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL);
         }
 
         rvWidget = (RecyclerView) findViewById(R.id.rvWidget);
-
-        RecyclerViewOrientation rvViewOrientation;
-        RecyclerView.Orientation  layoutManagerOrientation;
-
-        CustomRecyclerAdapterV1 adapter;
+        
+        QWRecyclerViewAdapter adapter;
         if (isVertical) {
-            adapter = new CustomRecyclerAdapterV1(this, RecyclerViewMode.GRID, RecyclerViewOrientation.VERTICAL);
+            adapter = new QWRecyclerViewAdapter(this, QWRecyclerViewMode.GRID, QWRecyclerViewOrientation.VERTICAL);
             rvWidget.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false));
         } else {
-            adapter = new CustomRecyclerAdapterV1(this, RecyclerViewMode.GRID, RecyclerViewOrientation.HORIZONTAL);
+            adapter = new QWRecyclerViewAdapter(this, QWRecyclerViewMode.GRID, QWRecyclerViewOrientation.HORIZONTAL);
             rvWidget.setLayoutManager(new GridLayoutManager(this, 7, LinearLayoutManager.HORIZONTAL, false));
         }
 

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.qiwei_experiment_01.R;
 import com.google.android.material.card.MaterialCardView;
 
-public class CustomViewHolderV1 extends RecyclerView.ViewHolder {
+public class QWRecyclerItemViewHolder extends RecyclerView.ViewHolder {
 
     public TextView tvCountryName;
     public TextView tvCountryCode;
@@ -20,7 +20,7 @@ public class CustomViewHolderV1 extends RecyclerView.ViewHolder {
 
     public boolean viewSelected;
 
-    public CustomViewHolderV1(@NonNull View itemView) {
+    public QWRecyclerItemViewHolder(@NonNull View itemView) {
         super(itemView);
         tvCountryName = (TextView) itemView.findViewById(R.id.tvCountryName);
         tvCountryCode = (TextView) itemView.findViewById(R.id.tvCountryCode);

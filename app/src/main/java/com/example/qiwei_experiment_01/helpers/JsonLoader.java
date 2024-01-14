@@ -2,7 +2,7 @@ package com.example.qiwei_experiment_01.helpers;
 
 import android.content.Context;
 
-import com.example.qiwei_experiment_01.models.QW_Country;
+import com.example.qiwei_experiment_01.models.QWCountry;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -14,9 +14,9 @@ import java.util.List;
 
 public class JsonLoader {
 
-    public static ArrayList<QW_Country> loadCountries(Context context){
+    public static ArrayList<QWCountry> loadCountries(Context context){
 
-        ArrayList<QW_Country> countries = new ArrayList<>();
+        ArrayList<QWCountry> countries = new ArrayList<>();
 
         String jsonString;
 
@@ -33,7 +33,7 @@ public class JsonLoader {
             e.printStackTrace();
         }
 
-        Type listCountryType = new TypeToken<List<QW_Country>>() { }.getType();
+        Type listCountryType = new TypeToken<List<QWCountry>>() { }.getType();
 
         Gson gson = new Gson();
         countries = gson.fromJson(jsonString,listCountryType);

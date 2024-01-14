@@ -12,7 +12,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.example.qiwei_experiment_01.R;
 
-public class FragmentA extends DialogFragment {
+public class QWFragmentA extends DialogFragment {
 
 
 
@@ -25,10 +25,10 @@ public class FragmentA extends DialogFragment {
     public static final String TAG_FRAGMENT_A = "FragmentA";
     public static final String PARAM_TIMES_PRESSED = "timesPressed";
 
-    public static FragmentA newInstance(Integer timesPressed) {
+    public static QWFragmentA newInstance(Integer timesPressed) {
 
         Bundle args = new Bundle();
-        FragmentA fragment = new FragmentA();
+        QWFragmentA fragment = new QWFragmentA();
         args.putInt(PARAM_TIMES_PRESSED, timesPressed);
         fragment.setArguments(args);
         return fragment;

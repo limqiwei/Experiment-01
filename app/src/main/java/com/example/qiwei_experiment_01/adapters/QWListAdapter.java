@@ -8,16 +8,16 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.qiwei_experiment_01.R;
-import com.example.qiwei_experiment_01.models.QW_Country;
+import com.example.qiwei_experiment_01.models.QWCountry;
 
 import java.util.ArrayList;
 
-public class ListAdapterExample extends BaseAdapter {
+public class QWListAdapter extends BaseAdapter {
 
     private final Context context;
-    private ArrayList<QW_Country> countries;
+    private ArrayList<QWCountry> countries;
 
-    public ListAdapterExample(Context context, ArrayList<QW_Country> countries) {
+    public QWListAdapter(Context context, ArrayList<QWCountry> countries) {
         this.countries = countries;
         this.context = context;
     }
@@ -40,7 +40,7 @@ public class ListAdapterExample extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        QW_Country currentCountry = (QW_Country) this.getItem(position);
+        QWCountry currentCountry = (QWCountry) this.getItem(position);
         LayoutInflater inflater = LayoutInflater.from(context);
 
         if (convertView == null) {

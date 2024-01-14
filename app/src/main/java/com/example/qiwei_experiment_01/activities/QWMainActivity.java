@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.qiwei_experiment_01.R;
 
-public class MainActivity extends AppCompatActivity{
+public class QWMainActivity extends AppCompatActivity{
 
     Button btnTextWidgets;
     Button btnButtons;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity{
         btnTextWidgets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TextWidgetActivity.class);
+                Intent intent = new Intent(QWMainActivity.this, QWTextWidgetPlaygroundActivity.class);
                 startActivity(intent);
             }
         });
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity{
         btnListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListViewActivity.class);
+                Intent intent = new Intent(QWMainActivity.this, QWListViewActivity.class);
                 startActivity(intent);
             }
         });
@@ -66,7 +66,8 @@ public class MainActivity extends AppCompatActivity{
         btnRvView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RecyclerViewV1Activity.class);
+                Intent intent = new Intent(QWMainActivity.this, QWLinearRecyclerViewActivity.class);
+                intent.putExtra(QWLinearRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, true);
                 startActivity(intent);
             }
         });
@@ -74,7 +75,8 @@ public class MainActivity extends AppCompatActivity{
         btnHRvView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HRecyclerViewActivity.class);
+                Intent intent = new Intent(QWMainActivity.this, QWLinearRecyclerViewActivity.class);
+                intent.putExtra(QWLinearRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, false);
                 startActivity(intent);
             }
         });
@@ -82,16 +84,16 @@ public class MainActivity extends AppCompatActivity{
         btnGridRvView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, GridRecyclerViewActivity.class);
-                intent.putExtra(GridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, true);
+                Intent intent = new Intent(QWMainActivity.this, QWGridRecyclerViewActivity.class);
+                intent.putExtra(QWGridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, true);
                 startActivity(intent);
             }
         });
         btnGridHRvView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, GridRecyclerViewActivity.class);
-                intent.putExtra(GridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, false);
+                Intent intent = new Intent(QWMainActivity.this, QWGridRecyclerViewActivity.class);
+                intent.putExtra(QWGridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, false);
                 startActivity(intent);
             }
         });
