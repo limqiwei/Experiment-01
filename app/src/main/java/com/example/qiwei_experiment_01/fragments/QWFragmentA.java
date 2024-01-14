@@ -45,7 +45,7 @@ public class QWFragmentA extends DialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-         layout = inflater.inflate(R.layout.test_fragment, container, false);
+         layout = inflater.inflate(R.layout.fragment_a, container, false);
          this.tvNumberOfTimesPressed = layout.findViewById(R.id.tvNumberOfTimesPressed);
 
          this.tvNumberOfTimesPressed.setText(this.numberOfTimesPressed.toString());

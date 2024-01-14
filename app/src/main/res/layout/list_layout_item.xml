@@ -14,15 +14,19 @@
         <LinearLayout
             android:id="@+id/llCountryItem"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:background="@color/white"
             android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tvCountryName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:text="Country Name"
+                android:textStyle="bold"
+                android:textSize="@dimen/textsize"
+                android:singleLine="true"
+                android:background="@color/light_orange_lighter"
                 android:padding="@dimen/padding_sm"
                 />
 

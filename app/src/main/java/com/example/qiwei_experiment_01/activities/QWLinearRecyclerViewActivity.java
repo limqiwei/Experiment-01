@@ -19,7 +19,7 @@ public class QWLinearRecyclerViewActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recycler_layout_v1);
+        setContentView(R.layout.recycler_layout);
 
         boolean isVertical = true; // Default
         Bundle extras = getIntent().getExtras();
@@ -35,7 +35,13 @@ public class QWLinearRecyclerViewActivity extends AppCompatActivity{
         } else {
             rvWidget = (RecyclerView) findViewById(R.id.rvWidget);
             adapter = new QWRecyclerViewAdapter(this, QWRecyclerViewMode.LINEAR, QWRecyclerViewOrientation.HORIZONTAL);
-            rvWidget.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+            rvWidget.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false) {
+                @Override
+                public boolean checkLayoutParams(RecyclerView.LayoutParams lp) {
+                    lp.width = getWidth() / 2;
+                    return true;
+                }
+            });
         }
 
         adapter.setCountries(JsonLoader.loadCountries(this));

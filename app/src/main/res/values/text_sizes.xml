@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="textsize_sm">12dp</dimen>
     <dimen name="textsize">16dp</dimen>
     <dimen name="textsize_l">20dp</dimen>
     <dimen name="textsize_xl">24dp</dimen>

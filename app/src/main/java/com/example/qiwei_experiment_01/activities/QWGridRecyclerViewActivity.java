@@ -20,7 +20,7 @@ public class QWGridRecyclerViewActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recycler_layout_v1);
+        setContentView(R.layout.recycler_layout);
 
         boolean isVertical = true; // Default
         Bundle extras = getIntent().getExtras();
@@ -33,10 +33,23 @@ public class QWGridRecyclerViewActivity extends AppCompatActivity{
         QWRecyclerViewAdapter adapter;
         if (isVertical) {
             adapter = new QWRecyclerViewAdapter(this, QWRecyclerViewMode.GRID, QWRecyclerViewOrientation.VERTICAL);
-            rvWidget.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false));
+            rvWidget.setLayoutManager(new GridLayoutManager(this, 2, LinearLayoutManager.VERTICAL, false) {
+                @Override
+                public boolean checkLayoutParams(RecyclerView.LayoutParams lp) {
+                    return true;
+                }
+            });
         } else {
             adapter = new QWRecyclerViewAdapter(this, QWRecyclerViewMode.GRID, QWRecyclerViewOrientation.HORIZONTAL);
-            rvWidget.setLayoutManager(new GridLayoutManager(this, 7, LinearLayoutManager.HORIZONTAL, false));
+
+            rvWidget.setLayoutManager(new GridLayoutManager(this, 4, LinearLayoutManager.HORIZONTAL, false) {
+                @Override
+                public boolean checkLayoutParams(RecyclerView.LayoutParams lp) {
+                    lp.width = getWidth() / 2;
+                    lp.height = getHeight() / 4;
+                    return true;
+                }
+            });
         }
 
         adapter.setCountries(JsonLoader.loadCountries(this));

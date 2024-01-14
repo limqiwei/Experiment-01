@@ -25,6 +25,8 @@ public class QWRecyclerViewAdapter extends RecyclerView.Adapter<QWRecyclerItemVi
     QWRecyclerViewMode QWRecyclerViewMode;
     QWRecyclerViewOrientation QWRecyclerViewOrientation;
 
+    QWRecyclerItemViewHolder holder;
+
     public QWRecyclerViewAdapter(Context context, QWRecyclerViewMode QWRecyclerViewMode, QWRecyclerViewOrientation QWRecyclerViewOrientation) {
         this.context = context;
         this.QWRecyclerViewMode = QWRecyclerViewMode;
@@ -51,6 +53,7 @@ public class QWRecyclerViewAdapter extends RecyclerView.Adapter<QWRecyclerItemVi
 
     @Override
     public void onBindViewHolder(@NonNull QWRecyclerItemViewHolder holder, int position) {
+        this.holder = holder;
         QWCountry country = this.countries.get(position);
 
         holder.tvCountryName.setText(country.getName());

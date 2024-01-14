@@ -21,7 +21,7 @@ public class QWTextWidgetPlaygroundActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.text_widgets);
+        setContentView(R.layout.text_widget_playground);
 
         autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
         multiAutoCompleteTextView = (MultiAutoCompleteTextView) findViewById(R.id.multiAutoCompleteTextView);
