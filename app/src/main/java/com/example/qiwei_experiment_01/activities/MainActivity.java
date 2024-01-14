@@ -16,6 +16,9 @@ public class MainActivity extends AppCompatActivity{
     Button btnButtons;
     Button btnListView;
     Button btnRvView;
+    Button btnHRvView;
+    Button btnGridRvView;
+    Button btnGridHRvView;
 
     Context context;
 
@@ -36,8 +39,12 @@ public class MainActivity extends AppCompatActivity{
         btnButtons = (Button) findViewById(R.id.btnButtons);
         btnListView = (Button) findViewById(R.id.btnListView);
         btnRvView = (Button) findViewById(R.id.btnRvView);
+        btnHRvView = (Button) findViewById(R.id.btnHRvView);
+        btnGridRvView = (Button) findViewById(R.id.btnGridRvView);
+        btnGridHRvView = (Button) findViewById(R.id.btnGridHRvView);
 
         this.btnButtons.setEnabled(false);
+        this.btnButtons.setVisibility(View.GONE);
 
         btnTextWidgets.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +70,34 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        btnHRvView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HRecyclerViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnGridRvView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GridRecyclerViewActivity.class);
+                intent.putExtra(GridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, true);
+                startActivity(intent);
+            }
+        });
+        btnGridHRvView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GridRecyclerViewActivity.class);
+                intent.putExtra(GridRecyclerViewActivity.INTENT_PARAM_BOOLEAN_IS_VERTICAL, false);
+                startActivity(intent);
+            }
+        });
+
+
+
 
 
 

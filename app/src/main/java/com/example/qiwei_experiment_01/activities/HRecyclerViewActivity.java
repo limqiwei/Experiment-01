@@ -12,7 +12,7 @@ import com.example.qiwei_experiment_01.enums.RecyclerViewMode;
 import com.example.qiwei_experiment_01.enums.RecyclerViewOrientation;
 import com.example.qiwei_experiment_01.helpers.JsonLoader;
 
-public class RecyclerViewV1Activity extends AppCompatActivity{
+public class HRecyclerViewActivity extends AppCompatActivity{
 
     RecyclerView rvWidget;
     @Override
@@ -21,9 +21,9 @@ public class RecyclerViewV1Activity extends AppCompatActivity{
         setContentView(R.layout.recycler_layout_v1);
 
         rvWidget = (RecyclerView) findViewById(R.id.rvWidget);
-        CustomRecyclerAdapterV1 adapter = new CustomRecyclerAdapterV1(this, RecyclerViewMode.LINEAR, RecyclerViewOrientation.VERTICAL);
+        CustomRecyclerAdapterV1 adapter = new CustomRecyclerAdapterV1(this, RecyclerViewMode.LINEAR, RecyclerViewOrientation.HORIZONTAL);
         adapter.setCountries(JsonLoader.loadCountries(this));
-        rvWidget.setLayoutManager(new LinearLayoutManager(this));
+        rvWidget.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         rvWidget.setAdapter(adapter);
     }
 

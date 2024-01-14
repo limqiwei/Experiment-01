@@ -46,6 +46,27 @@
             android:layout_height="wrap_content"
             android:text="@string/recycler_view" />
 
+        <Button
+            android:id="@+id/btnHRvView"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/horizontal_recycler_view" />
+
+        <Button
+            android:id="@+id/btnGridRvView"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/grid_recycler_view_vertical" />
+
+        <Button
+            android:id="@+id/btnGridHRvView"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="50dp"
+            android:layout_height="wrap_content"
+            android:text="@string/grid_recycler_view_horizontal" />
+
     </LinearLayout>
 
 

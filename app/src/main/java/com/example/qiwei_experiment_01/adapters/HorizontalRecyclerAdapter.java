@@ -9,27 +9,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.qiwei_experiment_01.R;
-import com.example.qiwei_experiment_01.enums.RecyclerViewMode;
-import com.example.qiwei_experiment_01.enums.RecyclerViewOrientation;
 import com.example.qiwei_experiment_01.models.QW_Country;
 import com.example.qiwei_experiment_01.view_holders.CustomViewHolderV1;
 
 import java.util.List;
 
-public class CustomRecyclerAdapterV1 extends RecyclerView.Adapter<CustomViewHolderV1> {
+public class HorizontalRecyclerAdapter extends RecyclerView.Adapter<CustomViewHolderV1> {
 
     List<QW_Country> countries;
     Context context;
 
-    RecyclerViewMode recyclerViewMode;
-    RecyclerViewOrientation recyclerViewOrientation;
-
-    public CustomRecyclerAdapterV1(Context context, RecyclerViewMode recyclerViewMode, RecyclerViewOrientation recyclerViewOrientation) {
+    public HorizontalRecyclerAdapter(Context context) {
         this.context = context;
-        this.recyclerViewMode = recyclerViewMode;
-        this.recyclerViewOrientation = recyclerViewOrientation;
     }
-
 
     public void setCountries(List<QW_Country> countries) {
         this.countries = countries;
@@ -41,6 +33,8 @@ public class CustomRecyclerAdapterV1 extends RecyclerView.Adapter<CustomViewHold
         LayoutInflater inflater = LayoutInflater.from(context);
 
         View view = inflater.inflate(R.layout.list_layout_item, null, true);
+        RecyclerView.LayoutParams lp = new RecyclerView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        view.setLayoutParams(lp);
         CustomViewHolderV1 customViewHolderV1 = new CustomViewHolderV1(view);
         return customViewHolderV1;
     }
